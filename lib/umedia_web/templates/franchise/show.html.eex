@@ -1,0 +1,13 @@
+<h2>Show Franchise</h2>
+
+<ul>
+
+  <li>
+    <strong>Franchise name:</strong>
+    <%= @franchise.franchise_name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: franchise_path(@conn, :edit, @franchise) %></span>
+<span><%= link "Back", to: franchise_path(@conn, :index) %></span>

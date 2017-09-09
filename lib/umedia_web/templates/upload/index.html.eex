@@ -3,4 +3,4 @@
   <h2>Hello World, from Phoenix!</h2>
   <%= file_input f, :media, class: "form-control" %>
 </div>
-<%= end %>
+<% end %>

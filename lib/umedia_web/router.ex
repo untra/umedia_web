@@ -18,6 +18,8 @@ defmodule UmediaWeb.Router do
 
     get "/", PageController, :index
     get "/upload", UploadController, :index
+    resources "/shows", ShowController
+    resources "/franchises", FranchiseController
   end
 
   # Other scopes may use custom stacks.

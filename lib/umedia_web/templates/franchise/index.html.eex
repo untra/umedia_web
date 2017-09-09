@@ -1,0 +1,26 @@
+<h2>Listing Franchises</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Franchise name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for franchise <- @franchises do %>
+    <tr>
+      <td><%= franchise.franchise_name %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: franchise_path(@conn, :show, franchise), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: franchise_path(@conn, :edit, franchise), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: franchise_path(@conn, :delete, franchise), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Franchise", to: franchise_path(@conn, :new) %></span>

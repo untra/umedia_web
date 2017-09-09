@@ -1,0 +1,5 @@
+<h2>Edit Franchise</h2>
+
+<%= render "form.html", Map.put(assigns, :action, franchise_path(@conn, :update, @franchise)) %>
+
+<span><%= link "Back", to: franchise_path(@conn, :index) %></span>
